@@ -16,6 +16,7 @@ class ProductPage(BasePage):
     add_to_cart_button = (By.XPATH, "//button[text()='Add to cart']")
     view_cart_link = (By.XPATH, "//a[text()='View cart']")
     product_in_cart = (By.XPATH, "//a[contains(text(),'RF ID Card')]")
+    minimum_selection_error_message = (By.XPATH, "//ul[@class='woocommerce-error']/li/strong")
 
     # constructor
     def __init__(self, driver):
@@ -24,27 +25,25 @@ class ProductPage(BasePage):
 
     # page actions
 
-    def select_color(self):
-        self.select_element_from_dropdown(self.color_dropdown, "Red")
+    def select_color(self,color):
+        self.select_element_from_dropdown(self.color_dropdown, color)
 
-    def select_orientation(self):
-        self.select_element_from_dropdown(self.orientation_dropdown, "Landscape")
+    def select_orientation(self, orientation):
+        self.select_element_from_dropdown(self.orientation_dropdown, orientation)
 
-    def enter_profile_description(self):
-        self.do_sendkeys(self.profile_description, "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus")
+    def enter_profile_description(self,profile_desc):
+        self.do_sendkeys(self.profile_description, profile_desc)
 
     def click_need_phone_checkbox(self):
         self.do_click(self.need_phone_checkbox)
-        self.driver.execute_script("window.scrollTo(0,document.body.scrollHeight)")
 
-    def enter_phone_number(self):
-        self.do_sendkeys(self.phone_number, "9876543210")
+    def enter_phone_number(self,phno):
+        self.do_sendkeys(self.phone_number, phno)
         self.driver.execute_script("window.scrollTo(0,document.body.scrollHeight)")
         time.sleep(1)
 
-    def select_additional_elements(self):
-        self.select_element_from_dropdown(self.additional_elements, "logo")
-        self.select_element_from_dropdown(self.additional_elements, "border")
+    def select_additional_elements(self, element):
+        self.select_element_from_dropdown(self.additional_elements, element)
 
     def do_upload_file(self, file):
         self.do_sendkeys(self.upload_file, file)
@@ -60,3 +59,6 @@ class ProductPage(BasePage):
 
     def is_error_message_displayed(self):
         return self.validation_message_displayed(self.profile_description)
+
+    def is_minimum_selection_error_displayed(self):
+        return  self.is_element_displayed(self.minimum_selection_error_message)

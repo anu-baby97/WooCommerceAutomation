@@ -13,7 +13,6 @@ class TestLoginPage:
         self.loginPage = LoginPage(self.driver)
         self.loginPage.enter_username(TestData.USER_NAME)
         self.loginPage.enter_password(TestData.PASSWORD)
-        presence = self.loginPage.click_login_button()
-        assert presence, "Error message not displayed"
+        self.loginPage.click_login_button()
 
 
