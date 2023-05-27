@@ -19,5 +19,6 @@ To automate Woo Commerce Application follow the below steps:
       To generate html report -> **pytest Tests --html=./wooCommerce.html**
      
      
-     Generated Report:
+     **Generated Report**:
+     
      <img width="941" alt="image" src="https://github.com/anu-baby97/WooCommerceAutomation/assets/69788070/7c51a556-5a82-4f69-a238-f362732f9f37">
