@@ -17,4 +17,7 @@ To automate Woo Commerce Application follow the below steps:
       To make output more verbose -> **pytest Tests -v**
       To run test cases in parallel (mention number od threads to run) -> **pytest Tests -n 6**
       To generate html report -> **pytest Tests --html=./wooCommerce.html**
-      <img width="941" alt="image" src="https://github.com/anu-baby97/WooCommerceAutomation/assets/69788070/7c51a556-5a82-4f69-a238-f362732f9f37">
+     
+     
+     Generated Report:
+     <img width="941" alt="image" src="https://github.com/anu-baby97/WooCommerceAutomation/assets/69788070/7c51a556-5a82-4f69-a238-f362732f9f37">
