@@ -1,7 +1,7 @@
 # WooCommerceAutomation
 To automate Woo Commerce Application follow the below steps:
 1. Install Python (3.10.1) 
-2. Setting path for python in environment variables: 
+2. Setting path for python in environment variables:            
     i)  Open _Environment Variable_ window from Control Panel.     
     ii) Under _System variables_ select _Path_.         
     iii) Click on _Edit_. Then click _New_.         
