@@ -16,8 +16,8 @@ To automate Woo Commerce Application follow the below steps:
     v)  _pytest-order_ for ordering the test cases                  
     The automation script is written in POM model (_Pages, TestCases, Config files_ and _conftest.py_ file)
 5. To run the script, 
-   i) Clone the project from git 
-   ii) Open the terminal in current project and run the command: -> **pytest Tests**                         
+   i) Clone the project from git                
+   ii) Open the terminal in current project and run the command: -> **pytest Tests**                                       
       a) To make output more verbose -> **pytest Tests -v**                     
       b) To run test cases in parallel (mention number od threads to run) -> **pytest Tests -n 6**                      
       c) To generate html report -> **pytest Tests --html=./wooCommerce.html**                          
