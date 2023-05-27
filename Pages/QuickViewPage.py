@@ -5,7 +5,7 @@ from Pages.BasePage import BasePage
 from Pages.ProductPage import ProductPage
 
 
-class ProductListPage(BasePage):
+class QuickViewPage(BasePage):
     # web elements
     quick_view_link = (By.XPATH, "//h2[text()='RF ID Card']//parent::a//following-sibling::a[text()='Quick View']")
 

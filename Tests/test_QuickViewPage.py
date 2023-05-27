@@ -4,7 +4,7 @@ import pytest
 
 from Config.config import TestData
 from Pages.CartPage import CartPage
-from Pages.ProductListPage import ProductListPage
+from Pages.QuickViewPage import QuickViewPage
 from Pages.ProductPage import ProductPage
 
 
@@ -13,7 +13,7 @@ class TestProductListPage:
 
     def test_product_quickview_add_cart(self):
         self.productpage = ProductPage(self.driver, "https://woocommerce-850415-2933260.cloudwaysapps.com/shop")
-        self.productlistpage = ProductListPage(self.driver)
+        self.productlistpage = QuickViewPage(self.driver)
         self.productlistpage.click_quick_view_link()
         time.sleep(3)
         self.productpage.select_color("Red")
