@@ -3,6 +3,7 @@ import time
 import pytest
 
 from Config.config import TestData
+from Pages.CartPage import CartPage
 from Pages.ProductListPage import ProductListPage
 from Pages.ProductPage import ProductPage
 
@@ -11,10 +12,10 @@ from Pages.ProductPage import ProductPage
 class TestProductListPage:
 
     def test_product_quickview_add_cart(self):
-        self.productpage = ProductPage(self.driver)
+        self.productpage = ProductPage(self.driver, "https://woocommerce-850415-2933260.cloudwaysapps.com/shop")
         self.productlistpage = ProductListPage(self.driver)
         self.productlistpage.click_quick_view_link()
-        time.sleep(2)
+        time.sleep(3)
         self.productpage.select_color("Red")
         self.productpage.select_orientation("Landscape")
         self.productpage.enter_profile_description("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus")
@@ -26,5 +27,6 @@ class TestProductListPage:
         self.productpage.do_upload_file(TestData.FILE_UPLOAD)
         self.productpage.click_add_to_cart_button()
         self.productpage.click_view_cart_link()
-        assert self.productpage.is_product_in_cart_displayed(), "Product is not available in cart"
+        self.cartpage = CartPage(self.driver)
+        assert self.cartpage.is_product_in_cart_displayed(), "Product is not available in cart"
         time.sleep(2)

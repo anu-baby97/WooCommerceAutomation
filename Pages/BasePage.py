@@ -30,6 +30,12 @@ class BasePage:
         # self.driver.implicitly_wait(3)
         select.select_by_value(valueSelect)
 
+    def select_element_from_dropdown_by_visible_text(self, by_locator_dropdown, valueSelect):
+        element = WebDriverWait(self.driver, 10).until(EC.presence_of_element_located(by_locator_dropdown))
+        select = Select(element)
+        # self.driver.implicitly_wait(3)
+        select.select_by_visible_text(valueSelect)
+
     def is_element_displayed(self, by_locator):
         return WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(by_locator))
 

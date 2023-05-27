@@ -15,13 +15,13 @@ class ProductPage(BasePage):
     upload_file = (By.XPATH, "//input[@type='file']")
     add_to_cart_button = (By.XPATH, "//button[text()='Add to cart']")
     view_cart_link = (By.XPATH, "//a[text()='View cart']")
-    product_in_cart = (By.XPATH, "//a[contains(text(),'RF ID Card')]")
     minimum_selection_error_message = (By.XPATH, "//ul[@class='woocommerce-error']/li/strong")
 
+
     # constructor
-    def __init__(self, driver):
+    def __init__(self, driver,url):
         super().__init__(driver)
-        self.driver.get("https://woocommerce-850415-2933260.cloudwaysapps.com/product/rf-id-card")
+        self.driver.get(url)
 
     # page actions
 
@@ -53,9 +53,6 @@ class ProductPage(BasePage):
 
     def click_view_cart_link(self):
         self.do_click(self.view_cart_link)
-
-    def is_product_in_cart_displayed(self):
-        return self.is_element_displayed(self.product_in_cart)
 
     def is_error_message_displayed(self):
         return self.validation_message_displayed(self.profile_description)
