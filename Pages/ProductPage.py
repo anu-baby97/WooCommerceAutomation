@@ -17,27 +17,27 @@ class ProductPage(BasePage):
     view_cart_link = (By.XPATH, "//a[text()='View cart']")
     minimum_selection_error_message = (By.XPATH, "//ul[@class='woocommerce-error']/li/strong")
 
-
     # constructor
-    def __init__(self, driver,url):
+    def __init__(self, driver, url):
         super().__init__(driver)
         self.driver.get(url)
+        time.sleep(3)
 
     # page actions
 
-    def select_color(self,color):
+    def select_color(self, color):
         self.select_element_from_dropdown(self.color_dropdown, color)
 
     def select_orientation(self, orientation):
         self.select_element_from_dropdown(self.orientation_dropdown, orientation)
 
-    def enter_profile_description(self,profile_desc):
+    def enter_profile_description(self, profile_desc):
         self.do_sendkeys(self.profile_description, profile_desc)
 
     def click_need_phone_checkbox(self):
         self.do_click(self.need_phone_checkbox)
 
-    def enter_phone_number(self,phno):
+    def enter_phone_number(self, phno):
         self.do_sendkeys(self.phone_number, phno)
         self.driver.execute_script("window.scrollTo(0,document.body.scrollHeight)")
         time.sleep(1)
@@ -58,4 +58,4 @@ class ProductPage(BasePage):
         return self.validation_message_displayed(self.profile_description)
 
     def is_minimum_selection_error_displayed(self):
-        return  self.is_element_displayed(self.minimum_selection_error_message)
+        return self.is_element_displayed(self.minimum_selection_error_message)

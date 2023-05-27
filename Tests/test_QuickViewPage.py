@@ -10,7 +10,7 @@ from Pages.ProductPage import ProductPage
 
 @pytest.mark.usefixtures("init_driver")
 @pytest.mark.order("third")
-class TestProductListPage:
+class TestQuickViewPage:
 
     def test_product_quickview_add_cart(self):
         self.productpage = ProductPage(self.driver, "https://woocommerce-850415-2933260.cloudwaysapps.com/shop")
