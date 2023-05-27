@@ -8,7 +8,12 @@ To automate Woo Commerce Application follow the below steps:
     iv) Enter the path of Python install directory.         
     v) Click on OK buttons. The path for python is set.         
 3. Install selenium libraries using command **Python -m pip install -U Selenium**
-4. Install pycharm and after opening it, install _selenium_ package. Also _pycharm-html_ for generating reports and _pycharm-xdist_ for parallel test execution.
+4. Install Pycharm IDE, clone the Git Repository and install following python packages:
+    i)   _pytest_ package         
+    ii)  _selenium_ package
+    iii) _pytest-html_ for generating reports       
+    iv) _pytest-xdist_ for parallel test execution      
+    v)  _pytest-order_ for ordering the test cases          
     The automation script is written in POM model (_Pages, TestCases, Config files_ and _conftest.py_ file)
 5. To run the script, 
    i) Clone the project from git 
