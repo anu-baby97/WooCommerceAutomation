@@ -8,6 +8,7 @@ from Pages.LoginPage import LoginPage
 
 
 @pytest.mark.usefixtures("init_driver")
+@pytest.mark.order("first")
 class TestLoginPage:
 
     def test_valid_login(self):

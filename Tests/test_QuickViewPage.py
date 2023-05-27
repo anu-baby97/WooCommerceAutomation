@@ -9,6 +9,7 @@ from Pages.ProductPage import ProductPage
 
 
 @pytest.mark.usefixtures("init_driver")
+@pytest.mark.order("third")
 class TestProductListPage:
 
     def test_product_quickview_add_cart(self):

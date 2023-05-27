@@ -8,6 +8,7 @@ from Pages.ProductPage import ProductPage
 
 
 @pytest.mark.usefixtures("init_driver")
+@pytest.mark.order("second")
 class TestProductPage:
     URL = "https://woocommerce-850415-2933260.cloudwaysapps.com/product/rf-id-card"
 

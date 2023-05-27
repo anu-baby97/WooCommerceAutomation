@@ -8,6 +8,7 @@ from Pages.ProductPage import ProductPage
 
 
 @pytest.mark.usefixtures("init_driver")
+@pytest.mark.order("fourth")
 class TestCheckOutPage:
 
     def test_checkout_page_fields(self):
