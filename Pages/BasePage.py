@@ -1,11 +1,6 @@
-import time
-
-from selenium.webdriver import ActionChains
-from selenium.webdriver.common.alert import Alert
 from selenium.webdriver.support.select import Select
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium import webdriver
 
 """This class is the parent of all pages"""
 """It contains all generic methods and utilities for all pages"""

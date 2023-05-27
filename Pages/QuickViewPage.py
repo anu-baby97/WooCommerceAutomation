@@ -1,8 +1,5 @@
-import time
-
 from selenium.webdriver.common.by import By
 from Pages.BasePage import BasePage
-from Pages.ProductPage import ProductPage
 
 
 class QuickViewPage(BasePage):
