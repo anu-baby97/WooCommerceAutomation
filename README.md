@@ -19,7 +19,7 @@ To automate Woo Commerce Application follow the below steps:
    i) Clone the project from git                
    ii) Open the terminal in current project and run the command: -> **pytest Tests**                                       
       a) To make output more verbose -> **pytest Tests -v**                     
-      b) To run test cases in parallel (mention number od threads to run) -> **pytest Tests -n 6**                      
+      b) To run test cases in parallel (mention number of threads to run) -> **pytest Tests -n 6**                      
       c) To generate html report -> **pytest Tests --html=./wooCommerce.html**                          
      
      
